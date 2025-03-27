@@ -21,6 +21,7 @@ export default defineConfig([
         '**/node_modules',
         '**/package.json',
         '**/package-lock.json',
+        'build/*',
     ]),
     {
         extends: compat.extends(

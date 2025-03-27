@@ -4,7 +4,10 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "lint": "npx eslint src/*"
+        "build": "tsc src/index.ts --outDir build",
+        "lint": "npx eslint src/*",
+        "start:helloWorld": "run-func build/index.js helloWorld",
+        "watch": "tsc src/index.ts -w --outDir build"
     },
     "repository": {
         "type": "git",
@@ -21,7 +24,11 @@
         "@typescript-eslint/parser": "^8.28.0",
         "eslint": "^9.23.0",
         "eslint-config-prettier": "^10.1.1",
+        "jest": "^29.7.0",
         "prettier": "^3.5.3",
         "typescript": "^5.8.2"
+    },
+    "dependencies": {
+        "run-func": "^3.0.0"
     }
 }
