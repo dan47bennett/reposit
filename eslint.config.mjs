@@ -1,4 +1,6 @@
 import { defineConfig, globalIgnores } from 'eslint/config';
+import eslintConfigPrettier from 'eslint-config-prettier/flat';
+
 import typescriptEslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import path from 'node:path';
@@ -11,29 +13,30 @@ const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({
     baseDirectory: __dirname,
     recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
+    allConfig: js.configs.all,
 });
 
 export default defineConfig([
     globalIgnores([
         '**/node_modules',
         '**/package.json',
-        '**/package-lock.json'
+        '**/package-lock.json',
     ]),
     {
         extends: compat.extends(
-            'prettier',
             'eslint:recommended',
             'plugin:@typescript-eslint/eslint-recommended',
-            'plugin:@typescript-eslint/recommended'
+            'plugin:@typescript-eslint/recommended',
+            'prettier'
         ),
 
         plugins: {
-            '@typescript-eslint': typescriptEslint
+            '@typescript-eslint': typescriptEslint,
         },
 
         languageOptions: {
-            parser: tsParser
-        }
-    }
+            parser: tsParser,
+        },
+    },
+    eslintConfigPrettier,
 ]);
