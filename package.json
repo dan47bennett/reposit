@@ -1,0 +1,27 @@
+{
+    "name": "reposit",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dan47bennett/reposit.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dan47bennett/reposit/issues"
+    },
+    "homepage": "https://github.com/dan47bennett/reposit#readme",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^8.28.0",
+        "@typescript-eslint/parser": "^8.28.0",
+        "eslint": "^9.23.0",
+        "eslint-config-prettier": "^10.1.1",
+        "prettier": "^3.5.3",
+        "typescript": "^5.8.2"
+    }
+}
