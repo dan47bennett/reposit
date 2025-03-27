@@ -5,5 +5,5 @@
         "strict": true,
         "strictNullChecks": true
     },
-    "include": ["**/*.ts"]
+    "include": ["**/*.ts", "index.ts"]
 }
