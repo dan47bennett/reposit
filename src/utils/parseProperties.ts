@@ -28,7 +28,10 @@ async function parseProperties(): Promise<Property[]> {
             .on('data', (data: CsvProperty) => result.push(data))
             .on('error', reject)
             .on('end', () => {
-                const processedResult: Property[] = result.map((r) => ({
+                // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                const [_, ...rest] = result;
+
+                const processedResult: Property[] = rest.map((r) => ({
                     address: r.address,
                     capacity: Number(r.capacity),
                     id: r.id,

@@ -19,7 +19,11 @@ function parseTenants(): Promise<Tenant[]> {
         })
             .on('data', (data: Tenant) => result.push(data))
             .on('error', reject)
-            .on('end', () => resolve(result));
+            .on('end', () => {
+                // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                const [_, ...rest] = result;
+                resolve(rest);
+            });
     });
 }
 
