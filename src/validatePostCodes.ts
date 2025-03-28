@@ -1,6 +1,6 @@
 import { parseProperties } from './utils';
 
-export async function validatePostCode() {
+export async function validatePostCodes() {
     const properties = await parseProperties();
 
     // below found in answers to https://stackoverflow.com/questions/13969461/javascript-uk-postcode-validation

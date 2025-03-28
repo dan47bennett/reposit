@@ -6,10 +6,10 @@
     "scripts": {
         "build": "tsc src/index.ts --outDir build",
         "lint": "npx eslint src/*",
-        "start:getAverageRent": "run-func build/index.js runGetAverageRent",
-        "start:getMonthlyRentPerTenant": "run-func build/index.js runGetMonthlyRentPerTenant",
-        "start:getPropertyStatus": "run-func build/index.js runGetPropertyStatus",
-        "start:validatePostCode": "run-func build/index.js runValidatePostCode",
+        "start:getAverageRent": "run-func build/index.js runGetAverageRent $REGION",
+        "start:getMonthlyRentPerTenant": "run-func build/index.js runGetMonthlyRentPerTenant $ID",
+        "start:getPropertyStatus": "run-func build/index.js runGetPropertyStatus $ID",
+        "start:validatePostCodes": "run-func build/index.js runValidatePostCodes",
         "watch": "tsc src/index.ts -w --outDir build"
     },
     "repository": {
