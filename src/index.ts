@@ -1,5 +1,7 @@
 import { getAverageRent } from './getAverageRent';
 
 export function runGetAverageRent() {
-    return getAverageRent();
+    getAverageRent('ENGLAND').then((averageRent) => {
+        console.log('averageRent: ', averageRent);
+    });
 }
