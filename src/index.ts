@@ -1,8 +1,10 @@
-import { getAverageRent } from './getAverageRent';
-import { getMonthlyRentPerTenant } from './getMonthlyRentPerTenant';
-import { getPropertyStatus } from './getPropertyStatus';
+import {
+    getAverageRent,
+    getMonthlyRentPerTenant,
+    validatePostCodes,
+    getPropertyStatus,
+} from './lib';
 import { Region } from './types';
-import { validatePostCodes } from './validatePostCodes';
 
 export function runGetAverageRent(region: Region) {
     getAverageRent(region).then((averageRent) => {

@@ -1,6 +1,6 @@
-import { parseProperties, parseTenants } from './utils';
+import { parseProperties, parseTenants } from '../utils';
 
-export async function getPropertyStatus(propertyId: string) {
+async function getPropertyStatus(propertyId: string) {
     const properties = await parseProperties();
     const tenants = await parseTenants();
 
@@ -37,3 +37,5 @@ export async function getPropertyStatus(propertyId: string) {
     // should never be triggered
     return 'ERROR';
 }
+
+export default getPropertyStatus;

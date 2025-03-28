@@ -1,7 +1,7 @@
-import { Region } from './types';
-import { parseProperties } from './utils';
+import { Region } from '../types';
+import { parseProperties } from '../utils';
 
-export async function getAverageRent(region: Region) {
+async function getAverageRent(region: Region) {
     const properties = await parseProperties();
     const propertiesInRegion = properties.filter((p) => p.region === region);
 
@@ -14,3 +14,5 @@ export async function getAverageRent(region: Region) {
     const average = totalRent / propertiesInRegion.length;
     return Math.floor(average);
 }
+
+export default getAverageRent;

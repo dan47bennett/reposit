@@ -1,6 +1,6 @@
-import { parseProperties, parseTenants } from './utils';
+import { parseProperties, parseTenants } from '../utils';
 
-export async function getMonthlyRentPerTenant(propertyId: string) {
+async function getMonthlyRentPerTenant(propertyId: string) {
     const properties = await parseProperties();
     const tenants = await parseTenants();
 
@@ -22,3 +22,5 @@ export async function getMonthlyRentPerTenant(propertyId: string) {
 
     return Math.ceil(totalRent / numberOfTenants);
 }
+
+export default getMonthlyRentPerTenant;

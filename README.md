@@ -4,7 +4,7 @@ This repo reads data from two csvs of tenants and properties, and then performs 
 
 ## Running the functions
 
-The various functions can be run from the command line as follows:
+The various functions can be run from the command line. First run `npm i`, followed by `npm run build` and then call the functions as follows:
 
 - You can get the average rent for a region using `REGION={region} npm run start:getAverageRent`
 - To get the monthly rent per tenant for a property using the property id use `ID={id} npm run start:getMonthlyRentPerTenant`
