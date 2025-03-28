@@ -8,6 +8,7 @@
         "lint": "npx eslint src/*",
         "start:getAverageRent": "run-func build/index.js runGetAverageRent",
         "start:getMonthlyRentPerTenant": "run-func build/index.js runGetMonthlyRentPerTenant",
+        "start:validatePostCode": "run-func build/index.js runValidatePostCode",
         "watch": "tsc src/index.ts -w --outDir build"
     },
     "repository": {
