@@ -1,5 +1,6 @@
 import { getAverageRent } from './getAverageRent';
 import { getMonthlyRentPerTenant } from './getMonthlyRentPerTenant';
+import { getPropertyStatus } from './getPropertyStatus';
 import { validatePostCode } from './validatePostCode';
 
 export function runGetAverageRent() {
@@ -18,5 +19,11 @@ export function runGetMonthlyRentPerTenant() {
 export function runValidatePostCode() {
     validatePostCode().then((ids) => {
         console.log('ids: ', ids);
+    });
+}
+
+export function runGetPropertyStatus() {
+    getPropertyStatus('p_1016').then((status) => {
+        console.log('status: ', status);
     });
 }
