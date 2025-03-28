@@ -6,7 +6,7 @@
     "scripts": {
         "build": "tsc src/index.ts --outDir build",
         "lint": "npx eslint src/*",
-        "start:helloWorld": "run-func build/index.js helloWorld",
+        "start:getAverageRent": "run-func build/index.js runGetAverageRent",
         "watch": "tsc src/index.ts -w --outDir build"
     },
     "repository": {
@@ -29,6 +29,7 @@
         "typescript": "^5.8.2"
     },
     "dependencies": {
+        "csv-parse": "^5.6.0",
         "run-func": "^3.0.0"
     }
 }

@@ -1,1 +1,5 @@
-export * from './helloWorld';
+import { getAverageRent } from './getAverageRent';
+
+export function runGetAverageRent() {
+    return getAverageRent();
+}
